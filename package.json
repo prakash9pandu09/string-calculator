@@ -1,0 +1,24 @@
+{
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "description": "calculate the sum of integeres provided in the string",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prakash9pandu09/string-calculator.git"
+  },
+  "keywords": [
+    "[\"string-calculator\"",
+    "\"numbers",
+    "sum\"]"
+  ],
+  "author": "Jyothi Prakash Thaduri",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prakash9pandu09/string-calculator/issues"
+  },
+  "homepage": "https://github.com/prakash9pandu09/string-calculator#readme"
+}
