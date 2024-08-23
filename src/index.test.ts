@@ -48,4 +48,9 @@ describe("String Calculator", () => {
         const result3 = strCalc.add("//{\n8{9{0{11{10");
         expect(result3).toEqual(38);
     });
+
+    it("should throw error for negative numbers", () => {
+        const result = strCalc.add("1,2,-3,-4,5,-6");
+        expect(() => result).toThrow("negative numbers not allowed -3,-4,-6");
+    });
 });
