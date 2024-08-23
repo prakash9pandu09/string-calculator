@@ -18,6 +18,9 @@ export class StringCalculator {
         const negativeNumbers: number[] = [];
         if(numberString.startsWith('//')) {
             delimiter = numberString.split('\n')[0].split('//')[1];
+            if(delimiter.length > 1) {
+                delimiter = delimiter.slice(1, -1);
+            }
             let newNumStr = numberString.split('\n')[1];
             numStrArray = newNumStr.split(delimiter);
         } else {
