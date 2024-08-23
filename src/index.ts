@@ -15,6 +15,7 @@ export class StringCalculator {
 
         let delimiter: string | RegExp;
         let numStrArray: string[];
+        const negativeNumbers: number[] = [];
         if(numberString.startsWith('//')) {
             delimiter = numberString.split('\n')[0].split('//')[1];
             let newNumStr = numberString.split('\n')[1];
@@ -25,8 +26,17 @@ export class StringCalculator {
         }
         
         numStrArray.forEach((numStr: string) => {
-            sum += parseInt(numStr);
+            let strNum = parseInt(numStr);
+            if(strNum < 0) {
+                negativeNumbers.push(strNum);
+            } else {
+                sum += strNum;
+            }            
         });
+
+        if(negativeNumbers.length > 0) {
+            throw new Error(`negative numbers not allowed ${negativeNumbers.join(',')}`)
+        }
 
         return sum;
     }
