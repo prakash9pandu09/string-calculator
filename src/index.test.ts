@@ -77,4 +77,11 @@ describe("String Calculator", () => {
         const result1 = strCalc.add("//[*][^][&][#]\n1*2^3&4#5");
         expect(result1).toEqual(15);
     });
+
+    it("should handle multiple delimiters with any length", () => {
+        const result = strCalc.add("//[***][^^]\n10***20^^30");
+        expect(result).toEqual(60);
+        const result1 = strCalc.add("//[*][^^][&&&&][########]\n11*22^^33&&&&44########55");
+        expect(result1).toEqual(165);
+    });
 });
