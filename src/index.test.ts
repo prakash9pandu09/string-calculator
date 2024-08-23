@@ -36,5 +36,16 @@ describe("String Calculator", () => {
     it("should handle new line and comma between numbers", () => {
         const result = strCalc.add("1\n2,3");
         expect(result).toEqual(6);
+        const result1 = strCalc.add("4\n5,6\n7,8\n9\n10");
+        expect(result1).toEqual(49);
+    });
+
+    it("should handle different delimiters between numbers", () => {
+        const result1 = strCalc.add("//;\n1;2;3");
+        expect(result1).toEqual(6);
+        const result2 = strCalc.add("//*\n4*5*6*7");
+        expect(result2).toEqual(22);
+        const result3 = strCalc.add("//{\n8{9{0{11{10");
+        expect(result3).toEqual(38);
     });
 });
