@@ -63,7 +63,11 @@ describe("String Calculator", () => {
     });
 
     it("should handle any lenght of same delimiter", () => {
-        const result1 = strCalc.add("//[***]\n1***2***3");
-        expect(result1).toEqual(6);
+        const result = strCalc.add("//[***]\n1***2***3");
+        expect(result).toEqual(6);
+        const result1 = strCalc.add("//[&&&&&&]\n8&&&&&&8&&&&&&9&&&&&&10");
+        expect(result1).toEqual(35);
+        const result2 = strCalc.add("//[))))))))))]\n10))))))))))99))))))))))1))))))))))10040");
+        expect(result2).toEqual(110);
     });
 });
