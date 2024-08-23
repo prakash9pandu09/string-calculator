@@ -12,12 +12,17 @@ export class StringCalculator {
         if(numberString === '') {
             return sum;
         }
-        if(numberString.length === 1) {
-            sum = parseInt(numberString);
-            return sum;
-        }
 
-        const numStrArray: string[] = numberString.split(/[,\n]/);
+        let delimiter: string | RegExp;
+        let numStrArray: string[];
+        if(numberString.startsWith('//')) {
+            delimiter = numberString.split('\n')[0].split('//')[1];
+            let newNumStr = numberString.split('\n')[1];
+            numStrArray = newNumStr.split(delimiter);
+        } else {
+            delimiter = /[,\n]/;
+            numStrArray = numberString.split(delimiter);
+        }
         
         numStrArray.forEach((numStr: string) => {
             sum += parseInt(numStr);
@@ -26,3 +31,4 @@ export class StringCalculator {
         return sum;
     }
 }
+
