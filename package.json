@@ -4,6 +4,7 @@
   "description": "calculate the sum of integeres provided in the string",
   "main": "index.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
