@@ -1,14 +1,28 @@
+/**
+ * String calculator class
+ */
 export class StringCalculator {
+    /**
+     * 
+     * @param numberString 
+     * @returns sum of numbers
+     */
     public add(numberString: string): number {
+        let sum: number = 0;
         if(numberString === '') {
-            return 0;
+            return sum;
         }
         if(numberString.length === 1) {
-            return parseInt(numberString);
+            sum = parseInt(numberString);
+            return sum;
         }
-        let a = numberString.split(',')[0];
-        let b = numberString.split(',')[1];
-        let sum = parseInt(a) + parseInt(b);
+
+        const numStrArray: string[] = numberString.split(',');
+        
+        numStrArray.forEach((numStr: string) => {
+            sum += parseInt(numStr);
+        });
+
         return sum;
     }
 }
