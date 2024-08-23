@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/prakash9pandu09/string-calculator/issues"
   },
-  "homepage": "https://github.com/prakash9pandu09/string-calculator#readme"
+  "homepage": "https://github.com/prakash9pandu09/string-calculator#readme",
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
 }
