@@ -27,4 +27,9 @@ describe("String Calculator", () => {
         const result = strCalc.add("1,2");
         expect(result).toEqual(3);
     });
+
+    it("should return sum of multiple numbers seperated by comma(,)", () => {
+        const result = strCalc.add("1,2,3,4,5,6,7,8,9,10");
+        expect(result).toEqual(55);
+    });
 });
