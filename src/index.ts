@@ -1,5 +1,8 @@
 export class StringCalculator {
     public add(numberString: string): number {
-        return 0;
+        if(numberString === '') {
+            return 0;
+        }
+        return parseInt(numberString);
     }
 }
