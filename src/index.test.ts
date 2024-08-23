@@ -32,4 +32,9 @@ describe("String Calculator", () => {
         const result = strCalc.add("1,2,3,4,5,6,7,8,9,10");
         expect(result).toEqual(55);
     });
+
+    it("should handle new line between numbers", () => {
+        const result = strCalc.add("1\n2,3");
+        expect(result).toEqual(6);
+    });
 });
