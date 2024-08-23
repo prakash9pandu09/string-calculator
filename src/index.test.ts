@@ -55,7 +55,6 @@ describe("String Calculator", () => {
         expect(() => strCalc.add("-4\n5,6\n7,8\n9\n-10")).toThrow("negative numbers not allowed -4,-10");
     });
 
-    
     it("should ignore numbers greater than 1000", () => {
         const result1 = strCalc.add("1000,2,3");
         expect(result1).toEqual(1005);

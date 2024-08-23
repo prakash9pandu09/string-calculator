@@ -29,7 +29,7 @@ export class StringCalculator {
             let strNum = parseInt(numStr);
             if(strNum < 0) {
                 negativeNumbers.push(strNum);
-            } else {
+            } else if(strNum <= 1000) {
                 sum += strNum;
             }            
         });
