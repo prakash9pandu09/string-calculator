@@ -33,7 +33,7 @@ describe("String Calculator", () => {
         expect(result).toEqual(55);
     });
 
-    it("should handle new line between numbers", () => {
+    it("should handle new line and comma between numbers", () => {
         const result = strCalc.add("1\n2,3");
         expect(result).toEqual(6);
     });

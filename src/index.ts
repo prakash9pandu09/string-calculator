@@ -17,7 +17,7 @@ export class StringCalculator {
             return sum;
         }
 
-        const numStrArray: string[] = numberString.split(',');
+        const numStrArray: string[] = numberString.split(/[,\n]/);
         
         numStrArray.forEach((numStr: string) => {
             sum += parseInt(numStr);
