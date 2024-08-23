@@ -19,7 +19,7 @@ export class StringCalculator {
         if(numberString.startsWith('//')) {
             delimiter = numberString.split('\n')[0].split('//')[1];
             if(delimiter.length > 1) {
-                delimiter = delimiter.slice(1, -1);
+                delimiter = new RegExp(`[${delimiter.replace(/[[\]]+/g, '')}]`);
             }
             let newNumStr = numberString.split('\n')[1];
             numStrArray = newNumStr.split(delimiter);
