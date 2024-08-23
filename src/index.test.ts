@@ -61,4 +61,9 @@ describe("String Calculator", () => {
         const result2 = strCalc.add("//*\n1001*5*6");
         expect(result2).toEqual(11);
     });
+
+    it("should handle any lenght of same delimiter", () => {
+        const result1 = strCalc.add("//[***]\n1***2***3");
+        expect(result1).toEqual(6);
+    });
 });
